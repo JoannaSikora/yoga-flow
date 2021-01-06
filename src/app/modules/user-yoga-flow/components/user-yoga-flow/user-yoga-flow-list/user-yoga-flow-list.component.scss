@@ -1,0 +1,13 @@
+@import "../../../../../../styles/helpers/colors";
+
+.userYogaFlowList {
+  &_wrapper {
+    background-color: $darkPink;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+    min-width: fit-content;
+  }
+}

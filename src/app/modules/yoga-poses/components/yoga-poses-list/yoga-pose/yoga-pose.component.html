@@ -1,0 +1,16 @@
+<div [ngClass]="{'yogaPose--opacity': isAddedToFlow}" class="yogaPose_wrapper">
+  <button (click)="addToFlow()" class="yogaPose_button roundButton">+</button>
+  <div *ngIf="isAddedToFlow" class="yogaPose_count">Added {{yogaFlowPoseCount}} {{yogaFlowPoseCount === 1 ? 'time' : 'times'}}</div>
+
+  <div>
+    <div class="englishName">{{pose.englishName}}</div>
+    <div class="sanskritName">{{pose.sanskritName}}</div>
+  </div>
+
+  <div class="yogaPose_icon" aria-label="Yoga pose icon" [inlineSVG]="pose.icon"></div>
+
+  <div class="yogaPose_tags_wrapper">
+    <div class="tag tag--level">{{pose.level}}</div>
+    <div *ngFor="let tag of pose.bodyParts" class="tag">{{tag}}</div>
+  </div>
+</div>

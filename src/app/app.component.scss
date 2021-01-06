@@ -1,0 +1,13 @@
+.app {
+  &_wrapper {
+    display: flex;
+    overflow-y: hidden;
+  }
+
+  &_main {
+    &_wrapper {
+      width: 100%;
+      padding: 0 4rem;
+    }
+  }
+}

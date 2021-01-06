@@ -1,0 +1,92 @@
+@import "../../../../styles/helpers/colors";
+
+.sidebar {
+  &_wrapper {
+    width: 20rem;
+    min-height: 100vh;
+    height: 100%;
+    background-color: $white;
+    position: relative;
+
+    text-align: center;
+    transition: .5s ease-in margin-left;
+  }
+
+  &_filters {
+
+    &--bodyPart {
+      position: absolute;
+      top: 70vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    &_title {
+      font-weight: bold;
+    }
+
+    &_options {
+      &_wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &--hidden {
+    margin-left: -23rem;
+  }
+
+  &_button {
+    width: 2rem;
+    height: 2rem;
+    transition: .5s ease-in all;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+
+    &_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
+
+    &--hiddenSidebar {
+      margin-right: -7rem;
+    }
+  }
+
+  &_linkButton {
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem;
+    background-color: $orange;
+    margin: auto;
+    outline: none;
+    border: none;
+    color: $white;
+    font-size: 1.5rem;
+    padding: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease-in transform;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &_wrapper {
+      border-radius: 50%;
+      height: 15rem;
+      width: 15rem;
+      background-color: $white;
+      display: flex;
+      position: absolute;
+      top: calc(50vh - 7rem);
+      right: -3rem;
+    }
+  }
+}

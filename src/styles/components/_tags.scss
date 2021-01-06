@@ -1,0 +1,27 @@
+@import "../helpers/colors";
+
+.tag {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  font-size: .9rem;
+  background-color: $lightPink;
+  color: $orange;
+  transition: all .2s ease-in;
+
+  &--level {
+    background-color: $orange;
+    color: $lightPink;
+  }
+
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      color: $white;
+      background-color: $orange;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+@import "../helpers/colors";
+
+.roundButton {
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 2rem;
+  padding: 0;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease-in transform;
+  font-weight: bold;
+  color: $darkPink;
+  font-size: 1.5rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:focus, :active {
+    outline: none;
+  }
+}

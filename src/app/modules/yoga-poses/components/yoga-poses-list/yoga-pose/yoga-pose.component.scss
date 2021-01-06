@@ -1,0 +1,51 @@
+@import "../../../../../../styles/helpers/colors";
+
+.yogaPose {
+  &_wrapper {
+    background-color: $darkPink;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    height: 22rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &_button {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+  }
+
+  &_count {
+    position: absolute;
+    right: .5rem;
+    top: 4.5rem;
+    border: none;
+    color: $orange;
+    font-weight: bold;
+    font-size: .8rem;
+  }
+
+  &_tags {
+    &_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &_icon {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    margin: 1rem auto;
+    fill: $black;
+  }
+
+  &--opacity {
+    opacity: .6;
+  }
+}

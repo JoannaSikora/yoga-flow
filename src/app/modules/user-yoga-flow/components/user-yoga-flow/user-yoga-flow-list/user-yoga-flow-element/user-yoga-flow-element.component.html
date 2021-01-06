@@ -1,0 +1,31 @@
+<div class="userYogaFlowElement_wrapper">
+  <div class="userYogaFlowElement_order">{{pose.order}}</div>
+  <div class="userYogaFlowElement_arrows_wrapper">
+    <div *ngIf="pose.order === 1"></div>
+      <div
+        *ngIf="pose.order !== 1"
+        (click)="movePose(orderAction.Up)"
+        class="userYogaFlowElement_arrows_arrow userYogaFlowElement_arrows_arrow--up"
+        aria-label="Arrow up icon"
+        inlineSVG="assets/icons/arrow.svg"
+        role="button"></div>
+    <div
+      *ngIf="pose.order !== lastOrderNumber"
+      (click)="movePose(orderAction.Down)"
+      class="userYogaFlowElement_arrows_arrow userYogaFlowElement_arrows_arrow--down"
+      aria-label="Arrow up icon"
+      role="button"
+      [inlineSVG]="'assets/icons/arrow.svg'"></div>
+  </div>
+
+  <div class="userYogaFlowElement_details_wrapper">
+      <div class="userYogaFlowElement_details_names_wrapper">
+        <div class="englishName">{{pose.englishName}}</div>
+        <div class="sanskritName">{{pose.sanskritName}}</div>
+      </div>
+      <div class="userYogaFlowElement_details_icon" aria-label="Yoga pose icon" [inlineSVG]="pose.icon"></div>
+
+    <button (click)="removePoseFromFlow()" class="roundButton">-</button>
+  </div>
+
+</div>

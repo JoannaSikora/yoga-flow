@@ -1,0 +1,6 @@
+<div class="userYogaFlowList_wrapper">
+  <app-user-yoga-flow-element *ngFor="let pose of yogaFlow" [pose]="pose"></app-user-yoga-flow-element>
+  <div *ngIf="yogaFlow.length === 0">
+    Start adding some poses to your flow!
+  </div>
+</div>

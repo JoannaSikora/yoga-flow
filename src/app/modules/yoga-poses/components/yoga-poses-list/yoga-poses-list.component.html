@@ -1,0 +1,8 @@
+  <h2 class="page-title">Build your perfect yoga flow</h2>
+  <div class="yogaPoses_wrapper">
+    <app-yoga-pose
+      class="yogaPoses_pose"
+      *ngFor="let pose of yogaPoses"
+      [pose]="pose"
+    ></app-yoga-pose>
+  </div>

@@ -1,0 +1,84 @@
+@import "../../../../../../../styles/helpers/colors";
+
+.userYogaFlowElement {
+  &_wrapper {
+    background-color: $lightPink;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    min-width: fit-content;
+    padding-right: 1rem;
+    position: relative;
+
+    @media (max-width: 500px) {
+      height: 12rem;
+    }
+  }
+
+  &_order {
+    position: absolute;
+    top: .5rem;
+    left: 3.5rem;
+    color: $lightGray;
+  }
+
+  &_arrows {
+    &_wrapper {
+      background-color: $white;
+      height: 100%;
+      padding: .5rem;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &_arrow {
+      width: 2rem;
+      height: 2rem;
+      fill: $darkPink;
+      cursor: pointer;
+
+      &--up {
+        transform: rotate(-90deg);
+      }
+
+      &--down {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &_details {
+
+    &_wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+    }
+
+    &_names {
+      &_wrapper {
+        margin-left: .8rem;
+        text-align: start;
+        max-width: 4rem;
+      }
+    }
+
+
+    &_icon {
+      width: 4rem;
+      height: 4rem;
+      fill: $black;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<div [formGroup]="filtersForm"
+     [ngClass]="{'sidebar--hidden': !isShowing}"
+     class="sidebar_wrapper">
+  <div class="sidebar_button_wrapper">
+    <div
+      class="sidebar_button"
+      aria-label="menu icon"
+      role="button"
+      [inlineSVG]="'assets/icons/menu.svg'"
+      [ngClass]="{'sidebar_button--hiddenSidebar': !isShowing}"
+      (click)="toggleSidebar()">
+    </div>
+  </div>
+
+    <div [hidden]="currentUrl === '/your-yoga-flow'">
+      <h3 class="sidebar_filters_title">Pose level</h3>
+      <div class="sidebar_filters_options_wrapper">
+        <ng-container *ngFor="let level of poseLevel;">
+          <input
+            [value]="level"
+            (change)="onPoseLevelChange($event)"
+            [id]="level"
+            type="checkbox" />
+          <label [for]="level" class="tag tag--clickable">
+            {{level}}
+          </label>
+        </ng-container>
+      </div>
+    </div>
+
+  <div class="sidebar_linkButton_wrapper">
+
+    <button
+      *ngIf="currentUrl === '/yoga-poses'"
+      class="sidebar_linkButton"
+      routerLink="/your-yoga-flow">
+      See your flow
+    </button>
+
+    <button
+      *ngIf="currentUrl === '/your-yoga-flow'"
+      class="sidebar_linkButton"
+      routerLink="/yoga-poses">
+      Go back to pick more poses
+    </button>
+
+  </div>
+
+  <div [hidden]="currentUrl === '/your-yoga-flow'" class="sidebar_filters--bodyPart">
+      <h3 class="sidebar_filters_title">Pose for a body part</h3>
+      <div class="sidebar_filters_options_wrapper">
+        <ng-container *ngFor="let bodyPart of poseBodyParts;">
+          <input
+            [value]="bodyPart"
+            (change)="onBodyPartsChange($event)"
+            [id]="bodyPart"
+            type="checkbox" />
+          <label [for]="bodyPart" class="tag tag--clickable">
+            {{bodyPart}}
+          </label>
+        </ng-container>
+      </div>
+    </div>
+
+
+</div>

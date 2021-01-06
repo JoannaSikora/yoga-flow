@@ -1,0 +1,16 @@
+@import "helpers/colors";
+
+body, html {
+  font-size: 100%;
+  background-color: $lightPink;
+  overscroll-behavior: none;
+  box-sizing: border-box;
+  font-family: 'Roboto Light', sans-serif;
+  color: $black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

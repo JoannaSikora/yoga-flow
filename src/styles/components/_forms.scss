@@ -1,0 +1,10 @@
+@import "../helpers/colors";
+
+input[type=checkbox] {
+  display: none;
+
+  &:checked + label {
+    color: $white;
+    background-color: $orange;
+  }
+}

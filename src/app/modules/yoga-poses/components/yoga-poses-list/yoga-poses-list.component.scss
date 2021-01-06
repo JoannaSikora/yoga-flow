@@ -1,0 +1,13 @@
+.yogaPoses {
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &_pose {
+    width: 100%;
+    min-width: 16rem;
+    flex: 1;
+  }
+}
